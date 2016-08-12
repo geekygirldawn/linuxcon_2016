@@ -52,19 +52,14 @@ other people have used Gource to get you thinking about how you might use it!
 
 Links to some useful Gource Info:
 
+* [Gource website](http://gource.io/) for downloads and general info.
 * [Gource github repo](https://github.com/acaudwell/Gource), 
-including downloads and information about installation. You can 
-also look at the presentation I did about Gource at the
-[FLOSS Community Metrics Meeting](http://www.slideshare.net/geekygirldawn/floss-community-metrics-gource-custom-log-formats)
-
-I recommend playing around with the different controls to speed things up / slow down or show / hide
-things to get something that looks good with your data. Most of this information can be found
-using gource -H, but the [control page](https://github.com/acaudwell/Gource/wiki/Controls)
-on the wiki has more details about the controls. You might also check out these [templates]
-(https://github.com/FOSSRIT/gourciferous/tree/develop/Templates) with recommended configurations
-for different types of data (large projects, long-lived projects, etc.)
-
-You can also check out [Gourciferous](https://github.com/FOSSRIT/gourciferous) for visualizing multiple
+* [Control page](https://github.com/acaudwell/Gource/wiki/Controls) for a list of all of the 
+controls you can use to speed up / slow down or show / hide to get something that 
+looks good with your data. 
+* [Templates](https://github.com/FOSSRIT/gourciferous/tree/develop/Templates) with recommended 
+configurations for different types of data (large projects, long-lived projects, etc.)
+* [Gourciferous](https://github.com/FOSSRIT/gourciferous) for visualizing multiple
 repos in a single visualization using the custom log format.
 
 Code Repositories
@@ -138,7 +133,7 @@ What linuxcon.py does:
 (Note: assumes you have a my.cnf file to authenticate to the database.)
 * Runs the query.
 * Strips the email down to the username (everything before @example.com) to have a 
-shorter identifier for the users (looks much better on graphs).
+shorter identifier for the users.
 * Formats the output into a nice Gource custom log format sorted by time
 as gource_output.log
 
