@@ -20,7 +20,7 @@ def usage():
     print "http://www.gnu.org/licenses/gpl.txt"
     print ""
     print "Assumes you are using a MySQL database on localhost and that you have a my.cnf file."
-    print "The month and year are hardcoded into the query for this OSCON example to make data manageable,"
+    print "The month and year are hardcoded into the query for this example to make data manageable,"
     print "but you can remove that part of the query if you want to use it for all data."
     print """
 -h, --help
