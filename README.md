@@ -44,6 +44,7 @@ Using Gource
 visualize source code repositories.
 
 **Examples**
+
 If you aren’t already familiar with Gource, here are a few interesting videos of how 
 other people have used Gource to get you thinking about how you might use it!
 
