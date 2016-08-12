@@ -166,6 +166,19 @@ I also added a few other options to make it look a bit nicer:
 Bug Data
 --------
 
+a) Install [Bicho](https://metricsgrimoire.github.io/Bicho/)
+Note: See instructions at the link above for dependencies you might need to install first.
+
+    $ python setup.py install
+
+b) Log into mysql and create the database 
+
+    $ mysql> create database bicho;
+
+c) Import your bug data by running Bicho (see instructions at link above - varies by bug tracker)
+
+    $ bicho FINISH THIS
+
 ADD DETAILS HERE
 
 Data and Examples
