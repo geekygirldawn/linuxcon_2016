@@ -40,17 +40,22 @@ data and analysis from the presentations along with some extra material.
 Using Gource
 -------
 
-More info about [Gource](https://github.com/acaudwell/Gource), 
+[Gource](http://gource.io/) is a visualization tool most often used to
+visualize source code repositories.
+
+If you aren’t already familiar with Gource, here are a few interesting videos of how 
+other people have used Gource to get you thinking about how you might use it!
+
+* [Tribute to Seth Vidal](https://www.youtube.com/watch?v=OARZB0jGziQ), lead developer of the Yum project and long time Fedora contributor, shortly after he was killed by a hit-and-run driver while riding his bike. Seth’s contributions to Yum are in blue, while contributions from others are in white.
+* [Linux Kernel Development](https://www.youtube.com/watch?v=5iFnzr73XXk), 1991-2015. Visualize the full development history of any open source project, the Linux kernel in this example.
+* [Population Dynamics](https://www.youtube.com/watch?v=yh9IW9dXFQw) 1970-2010. A visualization of population dynamics.
+
+Links to some useful Gource Info:
+
+* [Gource github repo](https://github.com/acaudwell/Gource), 
 including downloads and information about installation. You can 
 also look at the presentation I did about Gource at the
 [FLOSS Community Metrics Meeting](http://www.slideshare.net/geekygirldawn/floss-community-metrics-gource-custom-log-formats)
-
-Code Repositories
------------------
-
-If you've never run Gource on your code repositories, you should!
-
-    $ gource </path/to/repo> 
 
 I recommend playing around with the different controls to speed things up / slow down or show / hide
 things to get something that looks good with your data. Most of this information can be found
@@ -62,6 +67,14 @@ for different types of data (large projects, long-lived projects, etc.)
 You can also check out [Gourciferous](https://github.com/FOSSRIT/gourciferous) for visualizing multiple
 repos in a single visualization using the custom log format.
 
+Code Repositories
+-----------------
+
+If you've never run Gource on your code repositories, you should!
+
+    $ gource </path/to/repo> 
+
+**ADD STUFF HERE**
 
 Data Gathering to use the Gource Custom Log Format
 --------------------------------------------------
@@ -70,9 +83,9 @@ More details about Using the Gource [custom log format](https://github.com/acaud
 option.
 
 If you are gathing data from open source communities, your best friend is
-the [MetricsGrimoire](https://github.com/MetricsGrimoire) suite of tools,
-especially [mlstats](https://github.com/MetricsGrimoire/MailingListStats) for mailing lists
-and [CVSAnaly](https://github.com/MetricsGrimoire/CVSAnalY) for code repos.
+the [MetricsGrimoire](https://github.com/MetricsGrimoire) suite of tools. This presentation
+uses [mlstats](https://github.com/MetricsGrimoire/MailingListStats) for mailing lists
+and [bicho](https://metricsgrimoire.github.io/Bicho/) for bug data.
 
 Mailing Lists
 -------------
@@ -115,20 +128,17 @@ but you would need to re-format it into a pipe-separated file that Gource can re
 
 **Step 2 (alternative): Use a Python script to easily run the database query and re-format the data a bit.**
 
-**NOTE: STRIP OUT NETWORK PORTION OF THIS SCRIPT**
-
 Run linuxcon.py:
 
-    $ linuxcon.py -o <outputfiledir> -d <database> -u <user-mysql> -p <password-mysql>
+    $ python linuxcon.py -o <outputfiledir> -d <database> 
 
 What linuxcon.py does:
 
-* Gathers information about where to put output files and the database being used.
+* Gathers information about where to put output files and the database being used. 
+(Note: assumes you have a my.cnf file to authenticate to the database.)
 * Runs the query.
 * Strips the email down to the username (everything before @example.com) to have a 
 shorter identifier for the users (looks much better on graphs).
-* Formats the output into a nice, clean CSV file called network_output.csv excluding
-new threads and self-replies.
 * Formats the output into a nice Gource custom log format sorted by time
 as gource_output.log
 
