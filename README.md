@@ -43,6 +43,7 @@ Using Gource
 [Gource](http://gource.io/) is a visualization tool most often used to
 visualize source code repositories.
 
+**Examples**
 If you aren’t already familiar with Gource, here are a few interesting videos of how 
 other people have used Gource to get you thinking about how you might use it!
 
@@ -50,7 +51,7 @@ other people have used Gource to get you thinking about how you might use it!
 * [Linux Kernel Development](https://www.youtube.com/watch?v=5iFnzr73XXk), 1991-2015. Visualize the full development history of any open source project, the Linux kernel in this example.
 * [Population Dynamics](https://www.youtube.com/watch?v=yh9IW9dXFQw) 1970-2010. A visualization of population dynamics.
 
-Links to some useful Gource Info:
+**Useful Gource Info**
 
 * [Gource website](http://gource.io/) for downloads and general info.
 * [Gource github repo](https://github.com/acaudwell/Gource), 
