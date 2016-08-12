@@ -26,7 +26,7 @@ def usage():
 -h, --help
 -o, --outputfiledir   OUTFILEDIR: Set the directory for the output files where
                       you want to store them. If these files exist, the 
-                      originals will OVERWRITTEN.
+                      originals will be OVERWRITTEN.
 -d, --database	      DATABASE: the database name to query.
 """
 
