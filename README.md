@@ -66,7 +66,7 @@ repos in a single visualization using the custom log format.
 Data Gathering to use the Gource Custom Log Format
 --------------------------------------------------
 
-More details about Using the Gource [custom log format](https://code.google.com/p/gource/wiki/CustomLogFormat)
+More details about Using the Gource [custom log format](https://github.com/acaudwell/Gource/wiki/Custom-Log-Format)
 option.
 
 If you are gathing data from open source communities, your best friend is
