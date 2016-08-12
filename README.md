@@ -55,7 +55,8 @@ other people have used Gource to get you thinking about how you might use it!
 **Useful Gource Info**
 
 * [Gource website](http://gource.io/) for downloads and general info.
-* [Gource github repo](https://github.com/acaudwell/Gource), 
+* [Gource github repo](https://github.com/acaudwell/Gource)
+* [Gource wiki](https://github.com/acaudwell/Gource/wiki) for documentation, how-to, and videos
 * [Control page](https://github.com/acaudwell/Gource/wiki/Controls) for a list of all of the 
 controls you can use to speed up / slow down or show / hide to get something that 
 looks good with your data. 
