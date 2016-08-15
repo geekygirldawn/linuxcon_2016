@@ -186,6 +186,11 @@ has been around and the number of messages.
 
 ADD DETAILS HERE
 
+Notes:
+
+* These are queries for JIRA, since it's what I had handy, but others would be very similar.
+* issues_ext_jira.issue_key AS bug is only for debugging purposes, since it's a handy way to double check the data.
+
 New Issues (A)
 
     SELECT unix_timestamp(issues.submitted_on) AS unix_date, 
