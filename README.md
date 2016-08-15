@@ -113,7 +113,7 @@ A good list of starter queries can be found on the
 [mlstats wiki](https://github.com/MetricsGrimoire/MailingListStats/wiki/Queries) and
 you'll want to look at the [database schema](https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema) as well
 
-To get the data for the Gource custom log, you would need something more like this,
+To get the data for the Gource custom log, you would need something like this,
 but you would need to re-format it into a pipe-separated file that Gource can read 
 (see Python script alternative below):
 
@@ -175,11 +175,53 @@ b) Log into mysql and create the database
 
     $ mysql> create database bicho;
 
-c) Import your bug data by running Bicho (see instructions at link above - varies by bug tracker)
+c) Import your bug data by running Bicho (**see instructions at link above - varies by bug tracker**)
 
-    $ bicho FINISH THIS
+    $ bicho --db-user-out=[USER] --db-password-out=[PASS] --db-database-out=bicho -d 15 -b jira -u [URL]
+
+Note: this can take a long time depending on how long your mailing list 
+has been around and the number of messages.
+
+**Step 2: Run database queries to extract your data**
 
 ADD DETAILS HERE
+
+New Issues (A)
+
+    SELECT unix_timestamp(issues.submitted_on) AS unix_date, 
+    issues.submitted_by AS submitter_id, 
+    (SELECT people.user_id FROM people, issues WHERE people.id = submitter_id limit 1) AS submitter, 
+    issues.id AS id,
+    issues_ext_jira.component AS path,
+    issues_ext_jira.issue_key AS bug
+    FROM issues, issues_ext_jira
+    WHERE issues.id = issues_ext_jira.issue_id
+    ORDER BY unix_date;
+
+Modified Issues (M) - non-comment changes
+
+    SELECT unix_timestamp(changes.changed_on) AS unix_date, 
+    changes.changed_by AS submitter_id, 
+    (SELECT people.user_id FROM people, changes WHERE people.id = submitter_id limit 1) AS submitter, 
+    changes.issue_id AS id,
+    issues_ext_jira.component AS path,
+    issues_ext_jira.issue_key AS bug
+    FROM changes, issues_ext_jira
+    WHERE changes.issue_id = issues_ext_jira.issue_id
+    ORDER BY unix_date;
+
+Modified Issues (M) - comments
+
+    SELECT unix_timestamp(comments.submitted_on) AS unix_date, 
+    comments.submitted_by AS submitter_id, 
+    (SELECT people.user_id FROM people, changes WHERE people.id = submitter_id limit 1) AS submitter, 
+    comments.issue_id AS id,
+    issues_ext_jira.component AS path,
+    issues_ext_jira.issue_key AS bug
+    FROM comments, issues_ext_jira
+    WHERE comments.issue_id = issues_ext_jira.issue_id
+    ORDER BY unix_date;
+
 
 Data and Examples
 -----------------
