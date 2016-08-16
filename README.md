@@ -166,6 +166,16 @@ I also added a few other options to make it look a bit nicer:
 Bug Data
 --------
 
+There are (at least) two options for getting your bug data:
+
+1. Query your bug database directly. This is probably the quickest and easiest option,
+but it assumes that you have access to submit queries directly against your bug database.
+The [Gource Wiki](https://github.com/acaudwell/Gource/wiki/Custom-Log-Format) has an example 
+of a query that you can use for Bugzilla. Unfortunately, most of us don't have this access, 
+so we are left with option 2.
+2. Use [Bicho](https://metricsgrimoire.github.io/Bicho/) to download bug data into a 
+database that you can query. The rest of this section assumes that you are using Bicho.
+
 a) Install [Bicho](https://metricsgrimoire.github.io/Bicho/)
 Note: See instructions at the link above for dependencies you might need to install first.
 
@@ -184,8 +194,9 @@ has been around and the number of messages.
 
 **Step 2: Run database queries to extract your data**
 
-ADD DETAILS HERE
-
+These database queries are for a Bicho database; however, if you have direct access to your bug database, 
+it might be easier to run queries on your bug database directly as mentioned above. 
+ 
 Notes:
 
 * These are queries for JIRA, since it's what I had handy, but others would be very similar.
