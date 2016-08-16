@@ -1,0 +1,11 @@
+# Simple Example - slide 3 (then play Yum video)
+
+gource -a 1 -s .3 ~/gitrepos/cfgmgmtcamp.github.io/
+
+# Mailing List Example
+
+gource -i 5 --max-user-speed 100 -a 1 --highlight-users ~/gitrepos/linuxcon_2016/data/mailing_list_custom.log
+
+# Bugs Example
+
+gource -a 1 -s 1 --highlight-users ~/gitrepos/linuxcon_2016/data/bugs_custom.log
