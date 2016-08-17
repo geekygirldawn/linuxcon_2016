@@ -244,9 +244,37 @@ Font size for caption:
     gource -a 1 -s .3 --key --caption-file ~/gitrepos/linuxcon_2016/data/captions.log 
     --caption-duration 4 --caption-colour FF9900 --caption-size 20 ~/gitrepos/cfgmgmtcamp.github.io/
 
-**ADD STUFF HERE**
+###Additional Display Options
 
-**ADD --loop option somewhere**
+Running it on a loop can be useful if you want to run it on a big screen before a talk,
+at a meetup, or in the office.
+
+    --loop
+
+You may also want to run it full screen
+
+    -f
+
+###While Gource is Running
+
+**ADD HERE**
+
+###Generating video
+
+For large repos, Gource can take a while to start the visualization while it parses the logs. In this case,
+you might want to record it as a video to show people or upload online. There are
+[instructions and examples](https://github.com/acaudwell/Gource/wiki/Videos) on the Gource wiki.
+Keep in mind that recording the video can take a long time. I didn't time it, but it took 5-10 minutes
+on my MacBook Air to record a 31 second video.
+
+The [Gource video](https://youtu.be/KM2YMfOYOPY) for an earlier demo was generated using this command:
+
+    gource -f --logo images/bitergia_logo_sm.png --title "MailingListStats AKA mlstats"
+    --key --start-date '2014-01-01' --user-image-dir images -a 1 -s .05
+    --path ../MailingListStats -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec
+    libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
+
+
 
 Data Gathering to use the Gource Custom Log Format
 --------------------------------------------------
