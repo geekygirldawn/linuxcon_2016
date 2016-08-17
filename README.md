@@ -354,7 +354,7 @@ appreciate **helpful** suggestions about how to improve :)
 I also added a few other options to make it look a bit nicer:
 
 File idle time: Time files remain idle in seconds (default 0). This allows people being replied to
-to disappear after 10 seconds to clean up a bit and make it more readable.
+to disappear after 5 seconds to clean up a bit and make it more readable.
 
     -i, --file-idle-time 5
 
@@ -372,8 +372,7 @@ at option for that
 
 **Example: Mailing Lists**
 
-    $ gource -i 5 --max-user-speed 100 -a 1 --highlight-users 
-    ~/gitrepos/linuxcon_2016/data/mailing_list_custom.log
+    $ gource -i 5 --max-user-speed 100 -a 1 --highlight-users ~/gitrepos/linuxcon_2016/data/mailing_list_custom.log
 
 Bug Data
 --------
