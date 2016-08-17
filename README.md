@@ -116,11 +116,17 @@ the bottom of the screen.
 
 **Examples**
 
-```
-gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --title "MailingListStats aka mlstats" --logo ~/gitrepos/linuxcon_2016/images/bitergia-logo.png ~/gitrepos/MailingListStats/
+Using Logo and Title:
 
-gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --logo ~/gitrepos/linuxcon_2016/images/bitergia-banner.png ~/gitrepos/MailingListStats/
-```
+    gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 
+    --title "MailingListStats aka mlstats" --logo ~/gitrepos/linuxcon_2016/images/bitergia-logo.png 
+    ~/gitrepos/MailingListStats/
+
+Using banner image logo to replace title
+
+    gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 
+    --logo ~/gitrepos/linuxcon_2016/images/bitergia-banner.png ~/gitrepos/MailingListStats/
+
 
 
 **ADD STUFF HERE**
