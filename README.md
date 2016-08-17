@@ -43,7 +43,7 @@ Using Gource
 [Gource](http://gource.io/) is a visualization tool most often used to
 visualize source code repositories.
 
-**Examples**
+###Examples
 
 If you aren’t already familiar with Gource, here are a few interesting videos of how 
 other people have used Gource to get you thinking about how you might use it!
@@ -52,7 +52,7 @@ other people have used Gource to get you thinking about how you might use it!
 * [Linux Kernel Development](https://www.youtube.com/watch?v=5iFnzr73XXk), 1991-2015. Visualize the full development history of any open source project, the Linux kernel in this example.
 * [Population Dynamics](https://www.youtube.com/watch?v=yh9IW9dXFQw) 1970-2010. A visualization of population dynamics.
 
-**Useful Gource Info**
+###Useful Gource Info
 
 * [Gource website](http://gource.io/) for downloads and general info.
 * [Gource github repo](https://github.com/acaudwell/Gource)
@@ -140,7 +140,7 @@ and [bicho](https://metricsgrimoire.github.io/Bicho/) for bug data.
 Mailing Lists
 -------------
 
-**Step 1: Get your mailing list data into a database using mlstats.**
+###Step 1: Get your mailing list data into a database using mlstats.
 
 a) Install [mlstats](https://github.com/MetricsGrimoire/MailingListStats)
 
@@ -157,7 +157,7 @@ c) Import your mailing list data by running mlstats
 Note: this can take a long time depending on how long your mailing list 
 has been around and the number of messages.
 
-**Step 2: Run database queries to extract your data**
+###Step 2: Run database queries to extract your data
 
 This is the "do it yourself" method and requires a bit manual / scripting work on your part. See Step 2 (alternative) below for a Python script that does this for you.
 
@@ -176,7 +176,7 @@ but you would need to re-format it into a pipe-separated file that Gource can re
     messages m WHERE YEAR(m.first_date)=2015 AND MONTH(m.first_date)=1 AND 
     mp.message_id=m.message_id; 
 
-**Step 2 (alternative): Use a Python script to easily run the database query and re-format the data a bit.**
+###Step 2 (alternative): Use a Python script to easily run the database query and re-format the data a bit.
 
 Run linuxcon.py:
 
@@ -196,9 +196,12 @@ CAVEAT: I am not a real programmer; the code is ugly; and it may or may not work
 you without some tweaking. However, I will be doing more Python programming, and I 
 appreciate **helpful** suggestions about how to improve :)
 
-**Gource - Mailing List Options**
+###Gource - Mailing List Options
 
 I also added a few other options to make it look a bit nicer:
+
+Time files remain idle (default 0). This allows people being replied to
+       to disappear after 10 seconds to clean up a bit and make it more readable.
 
 * -i : Time files remain idle (default 0). This allows people being replied to 
        to disappear after 10 seconds to clean up a bit and make it more readable.
@@ -228,6 +231,8 @@ so we are left with option 2.
 2. Use [Bicho](https://metricsgrimoire.github.io/Bicho/) to download bug data into a 
 database that you can query. The rest of this section assumes that you are using Bicho.
 
+###Step 1: Get your bug data into a database using Bicho
+
 a) Install [Bicho](https://metricsgrimoire.github.io/Bicho/)
 
 Note: See instructions at the link above for dependencies you might need to install first.
@@ -245,7 +250,7 @@ c) Import your bug data by running Bicho (**see instructions at link above - var
 Note: this can take a long time depending on how long your mailing list 
 has been around and the number of messages.
 
-**Step 2: Run database queries to extract your data**
+###Step 2: Run database queries to extract your data
 
 These database queries are for a Bicho database; however, if you have direct access to your bug database, 
 it might be easier to run queries on your bug database directly as mentioned above. 
@@ -295,7 +300,7 @@ Modified Issues (M) - comments
 Data and Examples
 -----------------
 
-**Mailing List Data**
+###Mailing List Data
 
 The data used in the examples comes from the Linux kernel 
 [IOMMU list](http://lists.linuxfoundation.org/pipermail/iommu/) for January 2015.
@@ -312,7 +317,7 @@ manageable as an example.
 Many of the kernel lists have other ways of logging (Gmane, etc.) that aren't quite as clean
 when imported. 
 
-**Bug Data**
+###Bug Data
 
 The bug data is courtesy of [Dr. Guido Conaldi](http://www.gre.ac.uk/business/study/ibe/staff/guido-conaldi), Senior Lecturer at The University of Greenwich. This dataset came from one of his research projects using network analysis on bug tracker data.
 
