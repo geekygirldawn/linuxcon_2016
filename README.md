@@ -128,7 +128,7 @@ Background image
 
     gource --background-image background.png
 
-**Examples**
+**Examples: Make it look great**
 
 Using Logo and Title:
 
@@ -142,6 +142,46 @@ Using banner image logo to replace title
     --logo ~/gitrepos/linuxcon_2016/images/bitergia-banner.png ~/gitrepos/MailingListStats/
 
 
+###Display Additional Information
+
+**Key**
+
+Add a file extension key to show which colors are used for each file extension. You 
+can also toggle this on or off by typing the "K" key while gource is running. 
+
+    --key
+
+**Captions**
+
+These are great for narrating important milestones or other activities in the project:
+release dates, people joining the project, major refactoring, etc.
+
+First, you need a pipe separated file with unix timestamp|description (one per line):
+
+    1373850061|Kris begins work on the website
+    1375750861|Dawn fixes some typos
+    1379120461|Richard makes everything look nice
+
+Tell gource where to find the file:
+
+    --caption-file linuxcon_2016/data/captions.log
+
+Specify the duration of the caption display in seconds (default is 10 seconds):
+
+    --caption-duration 4
+
+Hex value for the caption font color:
+
+    --caption-colour FF9900
+
+Font size for caption:
+
+    --caption-size 20
+
+**Example: Captions**
+
+    gource -a 1 -s .3 --key --caption-file ~/gitrepos/linuxcon_2016/data/captions.log 
+    --caption-duration 4 --caption-colour FF9900 --caption-size 20 ~/gitrepos/cfgmgmtcamp.github.io/
 
 **ADD STUFF HERE**
 
