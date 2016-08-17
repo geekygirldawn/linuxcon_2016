@@ -114,6 +114,20 @@ the bottom of the screen.
 
     --logo images/bitergia-banner.png
 
+**Other Options not in this example**
+
+Here are a few other options that I'm not using here, but might be useful for you,
+and other options for changing the appearance can be found on the 
+[wiki](https://github.com/acaudwell/Gource/wiki/Controls) or by using gource -H
+
+Background color (hex value)
+
+    gource --background 555555 
+
+Background image
+
+    gource --background-image background.png
+
 **Examples**
 
 Using Logo and Title:
