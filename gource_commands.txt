@@ -2,6 +2,12 @@
 
 gource -a 1 -s .3 ~/gitrepos/cfgmgmtcamp.github.io/
 
+# Look Nicer Examples
+
+gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --title "MailingListStats aka mlstats" --logo ~/gitrepos/linuxcon_2016/images/bitergia-logo.png ~/gitrepos/MailingListStats/
+
+gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --logo ~/gitrepos/linuxcon_2016/images/bitergia-banner.png ~/gitrepos/MailingListStats/
+
 # Mailing List Example
 
 gource -i 5 --max-user-speed 100 -a 1 --highlight-users ~/gitrepos/linuxcon_2016/data/mailing_list_custom.log

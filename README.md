@@ -70,9 +70,61 @@ Code Repositories
 
 If you've never run Gource on your code repositories, you should!
 
+It's easy to run:
+
     $ gource </path/to/repo> 
 
+However, repos vary dramatically in size, activity, etc., so the default options probably
+won't be ideal. 
+
+###Make it look great
+
+There are a number of options you can use to make your Gource visualization look better.
+Here are a few that you probably want to use most of the time.
+
+**Date Format**
+
+You may want to look at the 
+[strftime manual](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) 
+for valid format strings.
+
+Display only the Month (name) and Year for busy repositories.
+
+    --date-format "%B %Y"
+
+Display the date without minutes / seconds.
+
+    --date-format "%A, %d %B %Y"
+
+**Title**
+
+    --title "My Awesome Project"
+
+**Font for Date and Title**
+
+    --font-size 22 --font-colour FF9900
+
+**Logo**
+
+    --logo images/bitergia-logo.png
+
+You can also get a little creative with the logo option to create a banner image
+to give you more control over the title or anything else you want to display at 
+the bottom of the screen.
+
+    --logo images/bitergia-banner.png
+
+**Examples**
+
+    gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --title "MailingListStats aka mlstats" --logo ~/gitrepos/linuxcon_2016/images/bitergia-logo.png ~/gitrepos/MailingListStats/
+
+    gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --logo ~/gitrepos/linuxcon_2016/images/bitergia-banner.png ~/gitrepos/MailingListStats/
+
+
+
 **ADD STUFF HERE**
+
+**ADD CAPTION FILES: https://github.com/acaudwell/Gource/wiki/Captions**
 
 Data Gathering to use the Gource Custom Log Format
 --------------------------------------------------
@@ -177,6 +229,7 @@ so we are left with option 2.
 database that you can query. The rest of this section assumes that you are using Bicho.
 
 a) Install [Bicho](https://metricsgrimoire.github.io/Bicho/)
+
 Note: See instructions at the link above for dependencies you might need to install first.
 
     $ python setup.py install
