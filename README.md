@@ -153,8 +153,10 @@ can also toggle this on or off by typing the "K" key while gource is running.
 
 **Captions**
 
-These are great for narrating important milestones or other activities in the project:
+Captions are great for narrating important milestones or other activities in the project:
 release dates, people joining the project, major refactoring, etc.
+The [captions](https://github.com/acaudwell/Gource/wiki/Captions) page on the wiki has 
+more details and a few additional options.
 
 First, you need a pipe separated file with unix timestamp|description (one per line):
 
@@ -184,8 +186,6 @@ Font size for caption:
     --caption-duration 4 --caption-colour FF9900 --caption-size 20 ~/gitrepos/cfgmgmtcamp.github.io/
 
 **ADD STUFF HERE**
-
-**ADD CAPTION FILES: https://github.com/acaudwell/Gource/wiki/Captions**
 
 Data Gathering to use the Gource Custom Log Format
 --------------------------------------------------
