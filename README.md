@@ -453,6 +453,9 @@ Modified Issues (M) - comments
     WHERE comments.issue_id = issues_ext_jira.issue_id
     ORDER BY unix_date;
 
+**Example: Bug data**
+
+    gource -a 1 -s 1 --highlight-users ~/gitrepos/linuxcon_2016/data/bugs_custom.log
 
 Data and Examples
 -----------------
@@ -476,9 +479,8 @@ when imported.
 
 ###Bug Data
 
-The bug data is courtesy of [Dr. Guido Conaldi](http://www.gre.ac.uk/business/study/ibe/staff/guido-conaldi), Senior Lecturer at The University of Greenwich. This dataset came from one of his research projects using network analysis on bug tracker data.
+The bug data is courtesy of [Dr. Guido Conaldi](http://www.gre.ac.uk/business/study/ibe/staff/guido-conaldi), Senior Lecturer at The University of Greenwich. This dataset came from one of his research projects using network analysis on bug tracker data from Apache 2.x Bugzilla.
 
-ADD DETAILS HERE.
 
 License and Copyright
 ---------------------
