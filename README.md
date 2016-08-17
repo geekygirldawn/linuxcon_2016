@@ -104,7 +104,7 @@ this option can help cut out the waiting and speed things up a bit.
 
     -a 1
 
-**Seconds Per Day
+**Seconds Per Day**
 
 The speed in seconds per day (default: 10).
 
@@ -114,7 +114,7 @@ on a subset of dates, you might need to increase it to better see what's going o
 
     -s 0.5
 
-**Others**
+**Hide Elements**
 
 You can also hide some elements, especially in large repositories, to make it easier to
 see what matters to you. You can hide any of these elements: bloom, date, dirnames, files, 
@@ -257,7 +257,11 @@ You may also want to run it full screen
 
 ###While Gource is Running
 
-**ADD HERE**
+* Space bar to pause
+* Ctrl + / - to speed up or slow down
+* Use arrow keys to move camera
+* Mouse over timeline widget at the bottom and click on a date to move in time.
+* K to show / hide the file type key
 
 ###Generating video
 
@@ -273,7 +277,6 @@ The [Gource video](https://youtu.be/KM2YMfOYOPY) for an earlier demo was generat
     --key --start-date '2014-01-01' --user-image-dir images -a 1 -s .05
     --path ../MailingListStats -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec
     libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
-
 
 
 Data Gathering to use the Gource Custom Log Format
