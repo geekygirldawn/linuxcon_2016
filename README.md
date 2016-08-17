@@ -60,6 +60,7 @@ other people have used Gource to get you thinking about how you might use it!
 * [Control page](https://github.com/acaudwell/Gource/wiki/Controls) for a list of all of the 
 controls you can use to speed up / slow down or show / hide to get something that 
 looks good with your data. 
+* Use gource -H to get a complete list of all controls (not all are listed on the wiki page).
 * [Templates](https://github.com/FOSSRIT/gourciferous/tree/develop/Templates) with recommended 
 configurations for different types of data (large projects, long-lived projects, etc.)
 * [Gourciferous](https://github.com/FOSSRIT/gourciferous) for visualizing multiple
@@ -77,7 +78,65 @@ It's easy to run:
 However, repos vary dramatically in size, activity, etc., so the default options probably
 won't be ideal. 
 
-###Make it look great
+###Dates and Speed
+
+These are the controls that you'll want to use to speed up the activity of a small repo
+or slow things down to be able to see what's really happening in a large project.
+
+**Dates: Start / Stop**
+
+You can tell Gource to start and/or stop on a specific date (time optional) in this format
+'YYYY-MM-DD hh:mm:ss +tz'. 
+
+It's a great way to highlight a specific time during a project
+(release window, specific version) or cut out periods of less activity at the beginning 
+or end of a project.
+
+    --start-date '2014-01-01'
+    --stop-date '2015-08-08'
+
+**Auto Skip**
+
+Auto skip to next entry if nothing happens for a number of seconds (default: 3).
+
+For small projects with less activity or projects where contributions tend to be sporadic, 
+this option can help cut out the waiting and speed things up a bit.
+
+    -a 1
+
+**Seconds Per Day
+
+The speed in seconds per day (default: 10).
+
+Again, for projects without a lot of activity, you'll want to reduce this number quite
+a bit. However, for large projects where there are a lot of commits per day, and you are focusing
+on a subset of dates, you might need to increase it to better see what's going on.
+
+    -s 0.5
+
+**Others**
+
+You can also hide some elements, especially in large repositories, to make it easier to
+see what matters to you. You can hide any of these elements: bloom, date, dirnames, files, 
+filenames, mouse, progress, root, tree, users, usernames
+
+    --hide dirnames
+
+###Add User Avatars
+
+You can either put the images in a directory with a filename matching the name of the 
+user or you might be able to pull the images from 
+[Gravatar](https://github.com/acaudwell/Gource/wiki/Gravatar-Example). In this example, I've 
+put the images into an images directory.
+
+    --user-image-dir ~/gitrepos/linuxcon_2016/images/
+
+**Example: Dates and Speed / Add User Avatars**
+
+    gource --start-date '2014-01-01' --stop-date '2015-08-08' -a 1 -s .05 
+    --user-image-dir ~/gitrepos/linuxcon_2016/images/ ~/gitrepos/MailingListStats/
+
+###Make It Look Great
 
 There are a number of options you can use to make your Gource visualization look better.
 Here are a few that you probably want to use most of the time.
@@ -186,6 +245,8 @@ Font size for caption:
     --caption-duration 4 --caption-colour FF9900 --caption-size 20 ~/gitrepos/cfgmgmtcamp.github.io/
 
 **ADD STUFF HERE**
+
+**ADD --loop option somewhere**
 
 Data Gathering to use the Gource Custom Log Format
 --------------------------------------------------

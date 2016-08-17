@@ -2,6 +2,10 @@
 
 gource -a 1 -s .3 ~/gitrepos/cfgmgmtcamp.github.io/
 
+# Dates and Speed / Add User Avatars Example
+
+gource --start-date '2014-01-01' --stop-date '2015-08-08' -a 1 -s .05 --user-image-dir ~/gitrepos/linuxcon_2016/images/ ~/gitrepos/MailingListStats/
+
 # Look Nicer Examples
 
 gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --title "MailingListStats aka mlstats" --logo ~/gitrepos/linuxcon_2016/images/bitergia-logo.png ~/gitrepos/MailingListStats/
