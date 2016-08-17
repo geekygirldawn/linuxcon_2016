@@ -353,23 +353,27 @@ appreciate **helpful** suggestions about how to improve :)
 
 I also added a few other options to make it look a bit nicer:
 
-Time files remain idle (default 0). This allows people being replied to
-       to disappear after 10 seconds to clean up a bit and make it more readable.
+File idle time: Time files remain idle in seconds (default 0). This allows people being replied to
+to disappear after 10 seconds to clean up a bit and make it more readable.
 
-* -i : Time files remain idle (default 0). This allows people being replied to 
-       to disappear after 10 seconds to clean up a bit and make it more readable.
-* --max-user-speed : Speed users can travel per second (default: 500). I slowed 
-       this down to 100 to make it easier to see the users.
-* -a 1 : Auto skip to next entry if nothing happens for a number of seconds (default: 3)
-         sped this up a bit.
-* --highlight-users : keeps the usernames for the people sending emails from
-                      disappearing. I would have liked to have the same for filenames
-                      which are the people being replied to, but can't seem to find
-                      at option for that
-* -s 30 : seconds per day. Not used here, but when you run these yourself, you might
-          want to slow things down a bit so you can better see what's going on.
+    -i, --file-idle-time 5
 
-    $ gource -i 5 --max-user-speed 100 -a 1 --highlight-users gource_output.log
+Max user speed: Speed users can travel per second (default: 500). 
+I slowed this down to 100 to make it easier to see the users. 
+
+    --max-user-speed 100 
+
+Highlight users: keeps the usernames for the people sending emails from
+disappearing. I would have liked to have the same for filenames
+which are the people being replied to, but can't seem to find
+at option for that
+
+    --highlight-users
+
+**Example: Mailing Lists**
+
+    $ gource -i 5 --max-user-speed 100 -a 1 --highlight-users 
+    ~/gitrepos/linuxcon_2016/data/mailing_list_custom.log
 
 Bug Data
 --------
