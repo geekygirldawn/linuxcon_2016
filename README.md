@@ -472,7 +472,7 @@ the Linux kernel to map the virtual memory accessible by devices to physical mem
 and other reasons. I selected this list for a few reasons:
 
 * I'm studying the Linux kernel community at the University of Greenwich, so I wanted to pick something 
-from the Linux kernel, but there are [over 150 mailing lists](http://vger.kernel.org/vger-lists.html)
+from the Linux kernel, but there are [over 240 mailing lists](http://vger.kernel.org/vger-lists.html)
 documented for the Linux kernel (and not all of them are listed at that link).  
 * The IOMMU list is lower volume than many of the kernel lists (651 posts for January), so it's more
 manageable as an example.
