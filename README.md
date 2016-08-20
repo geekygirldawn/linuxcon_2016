@@ -127,7 +127,7 @@ filenames, mouse, progress, root, tree, users, usernames
 You can either put the images in a directory with a filename matching the name of the 
 user or you might be able to pull the images from 
 [Gravatar](https://github.com/acaudwell/Gource/wiki/Gravatar-Example). In this example, I've 
-put the images into an images directory.
+put the images into an images directory, since it's a small number of contributors.
 
     --user-image-dir ~/gitrepos/linuxcon_2016/images/
 
@@ -145,7 +145,7 @@ Here are a few that you probably want to use most of the time.
 
 You may want to look at the 
 [strftime manual](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) 
-for valid format strings.
+for valid format strings if you aren't familiar with strftime.
 
 Display only the Month (name) and Year for busy repositories.
 
@@ -161,7 +161,8 @@ Display the date without minutes / seconds.
 
 **Font for Date and Title**
 
-    --font-size 22 --font-colour FF9900
+    --font-size 22
+    --font-colour FF9900
 
 **Logo**
 
@@ -175,8 +176,8 @@ the bottom of the screen.
 
 **Other Options not in this example**
 
-Here are a few other options that I'm not using here, but might be useful for you,
-and other options for changing the appearance can be found on the 
+Here are a few other options that I'm not using here, but might be useful for you.
+Other options for changing the appearance can be found on the 
 [wiki](https://github.com/acaudwell/Gource/wiki/Controls) or by using gource -H
 
 Background color (hex value)
