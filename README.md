@@ -170,7 +170,8 @@ Display the date without minutes / seconds.
 
 You can also get a little creative with the logo option to create a banner image
 to give you more control over the title or anything else you want to display at 
-the bottom of the screen.
+the bottom of the screen. Take a look at the bitergia-banner.png file in the images
+directory for an example.
 
     --logo images/bitergia-banner.png
 
