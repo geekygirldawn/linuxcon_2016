@@ -120,6 +120,7 @@ see what matters to you. You can hide any of these elements: bloom, date, dirnam
 filenames, mouse, progress, root, tree, users, usernames
 
     --hide dirnames
+    --hide dirnames,filenames
 
 ###Add User Avatars
 
