@@ -2,7 +2,8 @@
 
 By: [Dawn M. Foster](http://fastwonderblog.com). 
 PhD student at the [University of Greenwich, Centre for Business Network Analysis](http://www2.gre.ac.uk/about/faculty/business/research/centres/cbna/home) 
-and consultant at [The Scale Factory](http://www.scalefactory.com/)
+and [open source / community building consultant](http://fastwonderblog.com/consulting/) 
+at [The Scale Factory](http://www.scalefactory.com/)
 
 
 ### LinuxCon North America - Toronto 2016
