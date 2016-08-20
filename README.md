@@ -51,17 +51,17 @@ other people have used Gource to get you thinking about how you might use it!
 
 ###Useful Gource Info
 
-* [Gource website](http://gource.io/) for downloads and general info.
+* [Gource website](http://gource.io/) for downloads and general info
 * [Gource github repo](https://github.com/acaudwell/Gource)
 * [Gource wiki](https://github.com/acaudwell/Gource/wiki) for documentation, how-to, and videos
 * [Control page](https://github.com/acaudwell/Gource/wiki/Controls) for a list of all of the 
 controls you can use to speed up / slow down or show / hide to get something that 
-looks good with your data. 
-* Use gource -H to get a complete list of all controls (not all are listed on the wiki page).
+looks good with your data
+* Use gource -H to get a complete list of all controls (not all are listed on the wiki page)
 * [Templates](https://github.com/FOSSRIT/gourciferous/tree/develop/Templates) with recommended 
 configurations for different types of data (large projects, long-lived projects, etc.)
 * [Gourciferous](https://github.com/FOSSRIT/gourciferous) for visualizing multiple
-repos in a single visualization using the custom log format.
+repos in a single visualization using the custom log format
 
 Code Repositories
 -----------------
