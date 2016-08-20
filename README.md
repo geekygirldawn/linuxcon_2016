@@ -1,9 +1,5 @@
 # LinuxCon: Visualize Your Code Repos and More with Gource
 
-**NOTE: This is work in progress as I prepare for my talks.
-Right now, this repo is a mess as I pull things together from other talks
-and add new material.**
-
 By: [Dawn M. Foster](http://fastwonderblog.com). 
 PhD student at the [University of Greenwich, Centre for Business Network Analysis](http://www2.gre.ac.uk/about/faculty/business/research/centres/cbna/home) 
 and consultant at [The Scale Factory](http://www.scalefactory.com/)
