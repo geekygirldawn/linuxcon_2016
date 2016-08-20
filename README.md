@@ -94,12 +94,13 @@ or end of a project.
 
 **Auto Skip**
 
-Auto skip to next entry if nothing happens for a number of seconds (default: 3).
+Auto skip to the next entry if nothing happens for a number of seconds (default: 3).
 
 For small projects with less activity or projects where contributions tend to be sporadic, 
 this option can help cut out the waiting and speed things up a bit.
 
     -a 1
+    --auto-skip-seconds 1
 
 **Seconds Per Day**
 
@@ -110,6 +111,7 @@ a bit. However, for large projects where there are a lot of commits per day, and
 on a subset of dates, you might need to increase it to better see what's going on.
 
     -s 0.5
+    --seconds-per-day
 
 **Hide Elements**
 
@@ -251,6 +253,7 @@ at a meetup, or in the office.
 You may also want to run it full screen
 
     -f
+    --fullscreen
 
 ###While Gource is Running
 
