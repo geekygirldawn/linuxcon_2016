@@ -70,7 +70,7 @@ If you've never run Gource on your code repositories, you should!
 
 It's easy to run:
 
-    $ gource </path/to/repo> 
+    $ gource /path/to/repo
 
 However, repos vary dramatically in size, activity, etc., so the default options probably
 won't be ideal. 
