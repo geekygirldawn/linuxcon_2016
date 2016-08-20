@@ -183,11 +183,11 @@ Other options for changing the appearance can be found on the
 
 Background color (hex value)
 
-    gource --background 555555 
+    --background 555555 
 
 Background image
 
-    gource --background-image background.png
+    --background-image background.png
 
 **Examples: Make it look great**
 
@@ -253,7 +253,7 @@ at a meetup, or in the office.
 
     --loop
 
-You may also want to run it full screen
+You may also want to run it full screen.
 
     -f
     --fullscreen
@@ -263,7 +263,7 @@ You may also want to run it full screen
 * Space bar to pause
 * Ctrl + / - to speed up or slow down
 * Use arrow keys to move camera
-* Mouse over timeline widget at the bottom and click on a date to move in time.
+* Mouse over timeline widget at the bottom and click on a date to move in time
 * K to show / hide the file type key
 
 ###Generating video
@@ -296,7 +296,7 @@ and [bicho](https://metricsgrimoire.github.io/Bicho/) for bug data.
 Mailing Lists
 -------------
 
-###Step 1: Get your mailing list data into a database using mlstats.
+###Step 1: Get your mailing list data into a database using mlstats
 
 a) Install [mlstats](https://github.com/MetricsGrimoire/MailingListStats)
 
@@ -319,7 +319,7 @@ This is the "do it yourself" method and requires a bit manual / scripting work o
 
 A good list of starter queries can be found on the 
 [mlstats wiki](https://github.com/MetricsGrimoire/MailingListStats/wiki/Queries) and
-you'll want to look at the [database schema](https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema) as well
+you'll want to look at the [database schema](https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema) as well.
 
 To get the data for the Gource custom log, you would need something like this,
 but you would need to re-format it into a pipe-separated file that Gource can read 
@@ -359,7 +359,8 @@ I also added a few other options to make it look a bit nicer:
 File idle time: Time files remain idle in seconds (default 0). This allows people being replied to
 to disappear after 5 seconds to clean up a bit and make it more readable.
 
-    -i, --file-idle-time 5
+    -i 5
+    --file-idle-time 5
 
 Max user speed: Speed users can travel per second (default: 500). 
 I slowed this down to 100 to make it easier to see the users. 
@@ -369,7 +370,7 @@ I slowed this down to 100 to make it easier to see the users.
 Highlight users: keeps the usernames for the people sending emails from
 disappearing. I would have liked to have the same for filenames
 which are the people being replied to, but can't seem to find
-at option for that
+at option for that.
 
     --highlight-users
 
