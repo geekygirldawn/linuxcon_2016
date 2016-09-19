@@ -16,7 +16,7 @@ and consultant at [The Scale Factory](http://www.scalefactory.com/)
 
 * [Session Info and Abstract](http://sched.co/7o95)
 * Presentation Slides - coming soon
-* When: Thursday, October 6. 11:15am - 12:05pm
+* When: Thursday, October 6. 10:50am - 11:40pm
 * Room: Potsdam III
 
 Additional Info
