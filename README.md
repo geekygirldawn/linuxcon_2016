@@ -1,18 +1,15 @@
 # LinuxCon: Visualize Your Code Repos and More with Gource
 
-**NOTE: This is work in progress as I prepare for my talks.
-Right now, this repo is a mess as I pull things together from other talks
-and add new material.**
-
 By: [Dawn M. Foster](http://fastwonderblog.com). 
 PhD student at the [University of Greenwich, Centre for Business Network Analysis](http://www2.gre.ac.uk/about/faculty/business/research/centres/cbna/home) 
-and consultant at [The Scale Factory](http://www.scalefactory.com/)
+and [open source / community building consultant](http://fastwonderblog.com/consulting/) 
+at [The Scale Factory](http://www.scalefactory.com/)
 
 
 ### LinuxCon North America - Toronto 2016
 
 * [Session Info and Abstract](http://sched.co/7JWe)
-* [Presentation Slides](http://www.slideshare.net/geekygirldawn/visualize-your-code-repos-and-more-with-gource)
+* Presentation Slides - coming soon
 * When: Tuesday, August 23. 2:10pm - 3:00pm
 * Room: Marine
 
@@ -54,17 +51,17 @@ other people have used Gource to get you thinking about how you might use it!
 
 ###Useful Gource Info
 
-* [Gource website](http://gource.io/) for downloads and general info.
+* [Gource website](http://gource.io/) for downloads and general info
 * [Gource github repo](https://github.com/acaudwell/Gource)
 * [Gource wiki](https://github.com/acaudwell/Gource/wiki) for documentation, how-to, and videos
 * [Control page](https://github.com/acaudwell/Gource/wiki/Controls) for a list of all of the 
 controls you can use to speed up / slow down or show / hide to get something that 
-looks good with your data. 
-* Use gource -H to get a complete list of all controls (not all are listed on the wiki page).
+looks good with your data
+* Use gource -H to get a complete list of all controls (not all are listed on the wiki page)
 * [Templates](https://github.com/FOSSRIT/gourciferous/tree/develop/Templates) with recommended 
 configurations for different types of data (large projects, long-lived projects, etc.)
 * [Gourciferous](https://github.com/FOSSRIT/gourciferous) for visualizing multiple
-repos in a single visualization using the custom log format.
+repos in a single visualization using the custom log format
 
 Code Repositories
 -----------------
@@ -73,7 +70,7 @@ If you've never run Gource on your code repositories, you should!
 
 It's easy to run:
 
-    $ gource </path/to/repo> 
+    $ gource /path/to/repo
 
 However, repos vary dramatically in size, activity, etc., so the default options probably
 won't be ideal. 
@@ -97,12 +94,13 @@ or end of a project.
 
 **Auto Skip**
 
-Auto skip to next entry if nothing happens for a number of seconds (default: 3).
+Auto skip to the next entry if nothing happens for a number of seconds (default: 3).
 
 For small projects with less activity or projects where contributions tend to be sporadic, 
 this option can help cut out the waiting and speed things up a bit.
 
     -a 1
+    --auto-skip-seconds 1
 
 **Seconds Per Day**
 
@@ -113,6 +111,7 @@ a bit. However, for large projects where there are a lot of commits per day, and
 on a subset of dates, you might need to increase it to better see what's going on.
 
     -s 0.5
+    --seconds-per-day
 
 **Hide Elements**
 
@@ -121,13 +120,14 @@ see what matters to you. You can hide any of these elements: bloom, date, dirnam
 filenames, mouse, progress, root, tree, users, usernames
 
     --hide dirnames
+    --hide dirnames,filenames
 
 ###Add User Avatars
 
 You can either put the images in a directory with a filename matching the name of the 
 user or you might be able to pull the images from 
 [Gravatar](https://github.com/acaudwell/Gource/wiki/Gravatar-Example). In this example, I've 
-put the images into an images directory.
+put the images into an images directory, since it's a small number of contributors.
 
     --user-image-dir ~/gitrepos/linuxcon_2016/images/
 
@@ -145,7 +145,7 @@ Here are a few that you probably want to use most of the time.
 
 You may want to look at the 
 [strftime manual](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) 
-for valid format strings.
+for valid format strings if you aren't familiar with strftime.
 
 Display only the Month (name) and Year for busy repositories.
 
@@ -161,7 +161,8 @@ Display the date without minutes / seconds.
 
 **Font for Date and Title**
 
-    --font-size 22 --font-colour FF9900
+    --font-size 22
+    --font-colour FF9900
 
 **Logo**
 
@@ -169,23 +170,24 @@ Display the date without minutes / seconds.
 
 You can also get a little creative with the logo option to create a banner image
 to give you more control over the title or anything else you want to display at 
-the bottom of the screen.
+the bottom of the screen. Take a look at the bitergia-banner.png file in the images
+directory for an example.
 
     --logo images/bitergia-banner.png
 
 **Other Options not in this example**
 
-Here are a few other options that I'm not using here, but might be useful for you,
-and other options for changing the appearance can be found on the 
+Here are a few other options that I'm not using here, but might be useful for you.
+Other options for changing the appearance can be found on the 
 [wiki](https://github.com/acaudwell/Gource/wiki/Controls) or by using gource -H
 
 Background color (hex value)
 
-    gource --background 555555 
+    --background 555555 
 
 Background image
 
-    gource --background-image background.png
+    --background-image background.png
 
 **Examples: Make it look great**
 
@@ -251,16 +253,17 @@ at a meetup, or in the office.
 
     --loop
 
-You may also want to run it full screen
+You may also want to run it full screen.
 
     -f
+    --fullscreen
 
 ###While Gource is Running
 
 * Space bar to pause
 * Ctrl + / - to speed up or slow down
 * Use arrow keys to move camera
-* Mouse over timeline widget at the bottom and click on a date to move in time.
+* Mouse over timeline widget at the bottom and click on a date to move in time
 * K to show / hide the file type key
 
 ###Generating video
@@ -293,7 +296,7 @@ and [bicho](https://metricsgrimoire.github.io/Bicho/) for bug data.
 Mailing Lists
 -------------
 
-###Step 1: Get your mailing list data into a database using mlstats.
+###Step 1: Get your mailing list data into a database using mlstats
 
 a) Install [mlstats](https://github.com/MetricsGrimoire/MailingListStats)
 
@@ -316,7 +319,7 @@ This is the "do it yourself" method and requires a bit manual / scripting work o
 
 A good list of starter queries can be found on the 
 [mlstats wiki](https://github.com/MetricsGrimoire/MailingListStats/wiki/Queries) and
-you'll want to look at the [database schema](https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema) as well
+you'll want to look at the [database schema](https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema) as well.
 
 To get the data for the Gource custom log, you would need something like this,
 but you would need to re-format it into a pipe-separated file that Gource can read 
@@ -356,7 +359,8 @@ I also added a few other options to make it look a bit nicer:
 File idle time: Time files remain idle in seconds (default 0). This allows people being replied to
 to disappear after 5 seconds to clean up a bit and make it more readable.
 
-    -i, --file-idle-time 5
+    -i 5
+    --file-idle-time 5
 
 Max user speed: Speed users can travel per second (default: 500). 
 I slowed this down to 100 to make it easier to see the users. 
@@ -366,7 +370,7 @@ I slowed this down to 100 to make it easier to see the users.
 Highlight users: keeps the usernames for the people sending emails from
 disappearing. I would have liked to have the same for filenames
 which are the people being replied to, but can't seem to find
-at option for that
+at option for that.
 
     --highlight-users
 
@@ -468,7 +472,7 @@ the Linux kernel to map the virtual memory accessible by devices to physical mem
 and other reasons. I selected this list for a few reasons:
 
 * I'm studying the Linux kernel community at the University of Greenwich, so I wanted to pick something 
-from the Linux kernel, but there are [over 150 mailing lists](http://vger.kernel.org/vger-lists.html)
+from the Linux kernel, but there are [over 240 mailing lists](http://vger.kernel.org/vger-lists.html)
 documented for the Linux kernel (and not all of them are listed at that link).  
 * The IOMMU list is lower volume than many of the kernel lists (651 posts for January), so it's more
 manageable as an example.
