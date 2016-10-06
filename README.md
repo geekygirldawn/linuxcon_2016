@@ -231,7 +231,7 @@ Tell gource where to find the file:
 
 Specify the duration of the caption display in seconds (default is 10 seconds):
 
-    --caption-duration 4
+    --caption-duration 3
 
 Hex value for the caption font color:
 

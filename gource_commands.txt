@@ -14,7 +14,7 @@ gource -a 1 -s .3 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF99
 
 # Display Additional Information Example
 
-gource -a 1 -s .3 --key --caption-file ~/gitrepos/linuxcon_2016/data/captions.log --caption-duration 4 --caption-colour FF9900 --caption-size 20 ~/gitrepos/cfgmgmtcamp.github.io/
+gource -a 1 -s .3 --key --caption-file ~/gitrepos/linuxcon_2016/data/captions.log --caption-duration 3 --caption-colour FF9900 --caption-size 20 ~/gitrepos/cfgmgmtcamp.github.io/
 
 # Mailing List Example
 
