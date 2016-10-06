@@ -16,7 +16,7 @@ at [The Scale Factory](http://www.scalefactory.com/).
 ### LinuxCon Europe - Berlin 2016
 
 * [Session Info and Abstract](http://sched.co/7o95)
-* Presentation Slides - coming soon
+* [Presentation Slides](http://www.slideshare.net/geekygirldawn/visualize-your-code-repos-and-more-with-gourc)
 * When: Thursday, October 6. 10:50am - 11:40am
 * Room: Potsdam III
 
