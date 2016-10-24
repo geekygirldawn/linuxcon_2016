@@ -42,4 +42,12 @@ changing the font color, and adding title and logo.
     $ gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '^((?!sound).)*$' -s 30 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --logo ~/gitrepos/linuxcon_2016/kernel_example/images/tux.png --title "Linux Kernel Stable Tree"
 
 
+License and Copyright
+---------------------
 
+Code is licensed under [GNU General Public License (GPL), version 3 or later](http://www.gnu.org/licenses/gpl.txt).
+
+Other content, including the tutorial materials in this README and data files are licensed under a 
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Copyright (C) 2016 Dawn M. Foster
