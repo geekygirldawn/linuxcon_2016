@@ -20,6 +20,10 @@ at [The Scale Factory](http://www.scalefactory.com/).
 * When: Thursday, October 6. 10:50am - 11:40am
 * Room: Potsdam III
 
+### Linuxing in London Meetup - October 2016
+
+* See the [kernel_example subdirectory](https://github.com/geekygirldawn/linuxcon_2016/tree/master/kernel_example) for more details.
+
 Additional Info
 ---------------
 
