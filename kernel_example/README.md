@@ -18,6 +18,10 @@ This README.md contains only a small number of details.
 Linux Kernel Stable Tree Code Repo
 ----------------------------------
 
+Caveat: The kernel source code trees are enormous and Gource has to parse the git log before it
+can visualize the data. By limiting the log to one month, it can parse the data quickly enough for
+me to demo it :)
+
 Too much info - even limited to one month!
 
     $ gource --start-date '2015-01-01' --stop-date '2015-01-31'
@@ -30,7 +34,7 @@ For example, you can exclude the ".c" and ".h" files:
 Gource only lets you exclude files, but you can abuse regex a bit to match anything except a string, and then
 with the double negative of excluding via --file-filter, you can get all of the commits related to sound:
 
-    $ gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '^((?!sound).)*$'
+    $ gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '^((?!sound).)*$' -s 30
 
 Now you can make it look a bit nice by slowing things down, adding a date format, increasing the font size,
 changing the font color, and adding title and logo.
