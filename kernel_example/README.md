@@ -9,7 +9,7 @@ at [The Scale Factory](http://www.scalefactory.com/).
 ### Linuxing in London
 
 * [Meetup Details](https://www.meetup.com/Linuxing-In-London/events/234931498/) - 25 October 18:15
-* [Presentation Slides - coming soon]()
+* [Presentation Slides - coming soon](http://www.slideshare.net/geekygirldawn/using-gource-to-visualize-linux-kernel-data)
 
 **NOTE: See the [README.md file](https://github.com/geekygirldawn/linuxcon_2016)
 in the main repo for more details and other examples.**
