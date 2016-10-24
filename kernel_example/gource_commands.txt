@@ -1,8 +1,18 @@
+# Simple example
+
+gource -a 1 -s .3 ~/gitrepos/cfgmgmtcamp.github.io/
+
+# Run from linux-stable git repo
+
 gource --start-date '2015-01-01' --stop-date '2015-01-31'
 
-gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '\.(c|h)'
+gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '\.(c|h)' 
 
-gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '^((?!sound).)*$'
+gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '^((?!sound).)*$' -s 30
 
 gource --start-date '2015-01-01' --stop-date '2015-01-31' --file-filter '^((?!sound).)*$' -s 30 --date-format "%A, %d %B %Y" --font-size 22 --font-colour FF9900 --logo ~/gitrepos/linuxcon_2016/kernel_example/images/tux.png --title "Linux Kernel Stable Tree"
+
+# Mailing List Example
+
+gource -i 5 --max-user-speed 100 -a 1 --highlight-users ~/gitrepos/linuxcon_2016/data/mailing_list_custom.log
 
